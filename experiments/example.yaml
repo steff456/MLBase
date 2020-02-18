@@ -1,0 +1,28 @@
+OUTPUT_DIR: './example/'
+SNAPSHOT: ''
+OPTIM_SNAPSHOT: ''
+NO_CUDA: False
+CUDA_DEVICE: 2
+MODEL: 'MyModel'
+TRAIN:
+  EVAL_FIRST: False
+  LOG_INTERVAL: 100
+  BACKUP_ITERS: 1000
+  BATCH_SIZE: 200
+  EPOCHS: 40
+  START_EPOCH: 1
+  LR: 1e-5
+  MOMENTUM: 0.9
+  PATIENCE: 2
+  SEED: 1111
+  ROUTINE: 'MyRoutine'
+DATASET:
+  SPLIT:
+    - 'ExampleDataloader'
+  VAL:
+    - 'ExampleDataloader'
+  TEST:
+    - 'ExampleDataloader'
+  FULL_SIZE: False
+  WORKERS: 2
+  LENGTH: 0
